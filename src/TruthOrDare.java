@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TruthOrDare {
     private Scanner scanner = new Scanner(System.in);
-    private ArrayList<String> names = new ArrayList<>();
+
     private String lastNumber;
     private Object String;
 
@@ -13,12 +13,18 @@ public class TruthOrDare {
 
     public void playerSetup(){
         System.out.println("How many players do you have?");
-        String playerAmount = scanner.nextLine();
-//        System.out.println("What is the name of player " + );
-        String player1 = scanner.nextLine();
-        names.add(player1);
+        int playerAmount = scanner.nextInt();
+        System.out.println("Enter the names: ");
+        String[] names = new String[playerAmount];
+        for(int i = 0; i < names.length; i++){
+            System.out.println("What is the name of player " + (i + 1));
+            names[i] = scanner.next();
+        }
+        for(String test: names){
+            System.out.println(test);
+        }
         System.out.println("Are you ready?");
-        String confirmation = scanner.nextLine();
+        String confirmation = scanner.next();
         if (confirmation.equalsIgnoreCase("yes")){
             fiftyFifty();
         }
