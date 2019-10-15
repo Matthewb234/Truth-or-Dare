@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class TruthOrDare {
     private Scanner scanner = new Scanner(System.in);
 
-    private String lastNumber;
-    private Object String;
-
     public TruthOrDare (){
     }
 
